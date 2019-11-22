@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sally's Student</title>
+</head>
+<body>
+    <div id="application-root"></div>
+
+<script
+  src="https://unpkg.com/react@16/umd/react.development.js">
+</script>
+<script
+  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+</script>
+<script
+src="https://unpkg.com/babel-standalone@6/babel.min.js">
+</script>
+<script type="text/babel">
+    const appRoot = document.querySelector('#application-root');
+    function App(props){
+        return (
+            <main>
+                <header>
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg" width="200" alt="Resume picture of Sally Student"/>
+                    <h1>{props.studentName}</h1>
+                </header>
+                <address>
+                    <p><a href="mailto:sally@student.edu?subject=In%20regards%20to%20resume" target="_blank">sally@student.edu</a></p>
+                    <p>Phone number: 616-161-6161</p>
+                    <p>404 Serendipity Road, Newfoundland, MA</p>
+                </address>
+                <section className="experience">
+                    <h2>Experience</h2>
+                    <div id="job-one">
+                        <h3>Professor of Dark Arts at <strong id ="employer-one">Hogwarts</strong></h3>
+                        <p>1981-2020</p>
+                        <ul>
+                            <li>Turn students into frogs.</li>
+                            <li>Be a bad replacement for Severus Snape.</li>
+                        </ul>
+                    </div>
+                    <div id="job-two">
+                        <h3>Olympian at <strong id="employer-two">US National Team</strong></h3>
+                        <p>1979-1981</p>
+                        <ul>
+                            <li>Run 1,000 miles.</li>
+                            <li>Jump the fence.</li>
+                        </ul>
+                    </div>
+                </section>
+                <section className="school">
+                    <h2>Academics</h2>
+                    <h3>BA Economics - University of Watergate</h3>
+                    <p>1976-1981</p>
+                    <ul>
+                        <li>Summa Cum Laude</li>
+                        <li>Track and Field</li>
+                    </ul>
+                </section>
+                <p>Please contact me via the provided email as I never answer calls</p>
+            </main>
+                
+        )
+    }
+    ReactDOM.render(
+        <App studentName='Sally Student'/>,
+        appRoot
+    )
+</script>
+</body>
+</html>
